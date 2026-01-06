@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>中村さん</title>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;900&display=swap" rel="stylesheet">
+
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <header class="top">
+    <div class="top__inner">
+      <div class="badge">野中先生リメイク</div>
+      <h1 class="title">好きな犬と「ビヨーン」</h1>
+
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Section 1 -->
+    <section class="section" id="dogs">
+      <div class="section__head">
+        <h2 class="section__title">セクション1：好きな犬</h2>
+      </div>
+
+      <div class="cards">
+        <article class="card tilt tilt--left">
+          <div class="card__img">
+            <img src="./images/shibainu.png" alt="柴犬">
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">柴犬</h3>
+            <p class="card__text">きりっと顔、もふもふ。</p>
+          </div>
+        </article>
+
+        <article class="card tilt tilt--right">
+          <div class="card__img">
+            <img src="./images/pome.jpg" alt="ポメラニアン">
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">ポメラニアン</h3>
+            <p class="card__text">ふわっと、ふわふわ。</p>
+          </div>
+        </article>
+
+        <article class="card tilt tilt--left2">
+          <div class="card__img">
+            <img src="./images/husky.webp" alt="ハスキー">
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">ハスキー</h3>
+            <p class="card__text">目がかっこいい、雪の王者。</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Section 2 -->
+    <section class="section" id="slideshow">
+      <div class="section__head">
+        <h2 class="section__title">セクション2：スライドショー</h2>
+      </div>
+
+      <div class="slideshow">
+        <div class="swiper" aria-label="どうぶつスライドショー">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide slide">
+              <img class="slide__img" src="./images/dog.jpg" alt="犬">
+              <div class="slide__caption">
+                <div class="slide__title">犬カワイイ！</div>
+              </div>
+            </div>
+
+            <div class="swiper-slide slide">
+              <img class="slide__img" src="./images/rabbit.jpg" alt="うさぎ">
+              <div class="slide__caption">
+                <div class="slide__title">うさぎ</div>
+              </div>
+            </div>
+
+            <div class="swiper-slide slide">
+              <img class="slide__img" src="./images/elephant.jpg" alt="ゾウ">
+              <div class="slide__caption">
+                <div class="slide__title">ゾウでかい</div>
+              </div>
+            </div>
+
+            <div class="swiper-slide slide">
+              <img class="slide__img" src="./images/sparrow.jpg" alt="スズメ">
+              <div class="slide__caption">
+                <div class="slide__title">スズメかわいい</div>
+              </div>
+            </div>
+
+            <div class="swiper-slide slide">
+              <img class="slide__img" src="./images/dachshund.webp" alt="ミニチュアダックスフント">
+              <div class="slide__caption">
+                <div class="slide__title">ミニチュアダックスフントも好きです</div>
+              </div>
+            </div>
+
+            <div class="swiper-slide slide">
+              <img class="slide__img" src="./images/wolf.jpg" alt="オオカミ">
+              <div class="slide__caption">
+                <div class="slide__title">オオカミも好きです</div>
+              </div>
+            </div>
+
+            <div class="swiper-slide slide">
+              <img class="slide__img" src="./images/cat.jpg" alt="猫">
+              <div class="slide__caption">
+                <div class="slide__title">猫可愛い</div>
+              </div>
+            </div>
+
+            <div class="swiper-slide slide">
+              <img class="slide__img" src="./images/panda.jpg" alt="パンダ">
+              <div class="slide__caption">
+                <div class="slide__title">パンダーーー😭</div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev" aria-label="前へ"></div>
+          <div class="swiper-button-next" aria-label="次へ"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3 -->
+    <section class="section" id="game">
+      <div class="section__head">
+        <h2 class="section__title">セクション3：ビヨーン回避ゲーム</h2>
+        <p class="section__desc">タブレットでも遊べる。ボタンで自機操作、当たったら負け。</p>
+      </div>
+
+      <div class="game">
+        <div class="game__hud">
+          <div class="hud__item">
+            <span class="hud__label">TIME</span>
+            <span id="timeLabel" class="hud__value">0.0s</span>
+          </div>
+          <div class="hud__item">
+            <span class="hud__label">STATUS</span>
+            <span id="statusLabel" class="hud__value hud__value--ok">PLAYING</span>
+          </div>
+          <button id="resetBtn" class="btn">リセット</button>
+        </div>
+
+        <div id="gameArea" class="game__area" role="application" aria-label="回避ゲームエリア">
+          <img id="player" class="player" src="./images/inu.png" alt="プレイヤー">
+          <div id="enemy" class="enemy" aria-label="ビヨーン">ビョーン</div>
+          <div id="gameOverlay" class="overlay" aria-hidden="true">
+            <div class="overlay__card">
+              <div class="overlay__title">GAME OVER</div>
+              <div class="overlay__text">ビョーンに当たった！</div>
+              <button id="overlayResetBtn" class="btn btn--primary">もう一回</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="controls" aria-label="操作ボタン">
+          <button class="pad pad--up" data-dir="up" aria-label="上">↑</button>
+          <div class="controls__mid">
+            <button class="pad" data-dir="left" aria-label="左">←</button>
+            <button class="pad" data-dir="right" aria-label="右">→</button>
+          </div>
+          <button class="pad pad--down" data-dir="down" aria-label="下">↓</button>
+        </div>
+
+        <p class="tiny">
+          ※ PCならキーボード（←↑→↓ / WASD）でも動きます。
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 4 -->
+    <section class="section" id="aa">
+      <div class="section__head">
+        <h2 class="section__title">セクション4：デカチュアダックスフンド</h2>
+        <p class="section__desc">何かはよくわかってないですが残しました。</p>
+      </div>
+
+      <div class="aa">
+<pre>
+                   `
+    ....-??=m77????=,       `       `
+   ,!                   .D.....   `
+   ..J-.   ,   ..     `
+       (                               _?"+,  `
+       .,     ~                             r
+        j          `    ....JJ-........, ..7`
+        j  .?=??77?(..=`             ?7!       デカチュアダックスフンド
+</pre>
+      </div>
+    </section>
+
+    <!-- Section 5 -->
+    <section class="section" id="loop">
+      <div class="section__head">
+        <h2 class="section__title">セクション5：きのこパン無限スクロール</h2>
+      </div>
+
+      <div class="loop-wrap" aria-label="流れるきのこパン">
+        <div class="loop-area"></div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>© 先生が作り直してみた / みんなのアイデアが原点</p>
+    </footer>
+
+  </main>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script src="./main.js"></script>
+</body>
+</html>
